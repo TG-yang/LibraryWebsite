@@ -1,8 +1,3 @@
-UID,Name,Password,Type,Email,Phone,Profile,Deposit,BorrowSum,VerifySum
-C38269801,wenyangzheng,Zwy19960705,Student,806859504@qq.com,8649862969,../user-profile/806859504@qq.com18-11-22-05-27-03.jpg,10,0,psDL25
-C38269809,"Lifu Bao",zwy19950314,Student,lifubao@g.clemson.edu,1234567890,../user-profile/lifubao@g.clemson.edu18-11-11-06-07-02.jpg,-2,0,
-C38269800,"Lu Zhang",Zwy19960705,Student,LuZhang@g.clemson.edu,8649862969,../user-profile/LuZhang@g.clemson.edu18-11-21-08-22-30.jpg,10,0,
-,,,,wenyangzheng314@gmail.com,,,0,0,pzACQ0
-C38269821,wenyangzheng,Zwy19960705,Student,wenyanz@g.clemson.edu,8649862912,../user-profile/user-normal.jpg,10,0,huxzF4
-C38269804,zhanglu,zwy19960705,Professor,zhanglu@gmall.com,8649862969,../user-profile/zhanglu@gmall.com.jpg,1,0,
-,,,,zwenyang@outlook.com,,,0,0,mBCDN9
+Email,UID,Name,Password,Type,Phone,Profile,Deposit,BorrowSum,VerifySum
+lbao@g.clemson.edu,C20863159,Lifu,Zwy19960705,Student,8649862960,../user-profile/lbao@g.clemson.edu18-12-01-04-22-02.jpg,10,0,iqyBU2
+wenyanz@g.clemson.edu,C38269805,"Wenyang Zheng",Zwy19960705,Student,8649862969,../user-profile/wenyanz@g.clemson.edu18-11-30-09-35-34.jpg,19,0,gGR456

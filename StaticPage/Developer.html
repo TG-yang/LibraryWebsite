@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Developer</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../Account/PersonalPage.css">
+    <link rel="stylesheet" type="text/css" href="../Register/Register.css">
+    <link rel="stylesheet" type="text/css" href="AboutUs.css">
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.2.1.js"></script>
+    <script type="text/javascript" src ="../Account/Loading.js"></script>
+</head>
+<body onload="load()">
+<div id = "db_global_nav" class = "db_global_nav" >
+    <div class = "bd">
+        <div class = "top_nav_left">
+            <a href = "http://www.clemson.edu/" class = "nav_clemson">Clemson University</a>
+        </div>
+
+        <div class = "top_nav_right">
+            <a href = "../Login/login.html" class = "nav_login" id = "Login">Login</a>
+            <a href = "../Register/Register.html" class = "nav_register" id = "Register">Register</a>
+            <div class = "account-box" id = "account-box" onmouseleave="divObj.hidden()" >
+                <a href = "#" class = "account" id = "account" onclick="divObj.show()"></a>
+                <div class = "table-box" id = "table-box">
+                    <table class = "account-table" id = "account-table" cellpadding = "0" cellspacing= "0">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <a href = "#" onclick="myPersonalPage.pageClick()">Personal Page</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href = "../Index/Index.html" >Index Page</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href = "#" onclick="myLogout.out()">Logout</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id = "nav-sns" class = "nav-sns">
+</div>
+
+<div id = "wrapper" class = "wrapper">
+    <div id = "content" class = "content">
+        <h1>Team Member</h1>
+        <div class = "main-content">
+            <span class = "wrap">
+                <h3>WenYang Zheng</h3>
+            </span>
+            <div class = "indent">
+                <strong>Student ID:&nbsp;&nbsp;</strong>C38269805
+                <br>
+                <strong>Email:&nbsp;&nbsp;</strong>wenyanz@g.clemson.edu
+                <br>
+                <strong>Major:&nbsp;&nbsp;</strong>Computer Science
+                <br>
+                <strong>Main responsibility:&nbsp;&nbsp;</strong> Wenyang is mainly responsible for building the database and developing the server side using the PHP language.
+                In addition, he is responsible for backing up and recovering the database. What is more,
+                Wenyang also develop some web page like Login page, Register page, Forget Password page and Administrator page.
+                <br>
+                <br>
+            </div>
+            <span class = "wrap">
+                <h3>Lifu Bao</h3>
+            </span>
+            <div class = "indent">
+                <strong>Student ID:&nbsp;&nbsp;</strong>C20863159
+                <br>
+                <strong>Email:&nbsp;&nbsp;</strong>lbao@g.clemson.edu
+                <br>
+                <strong>Major:&nbsp;&nbsp;</strong>Computer Science
+                <br>
+                <strong>Main responsibility:&nbsp;&nbsp;</strong> Lifu is mainly responsible for coding HTML and a part of JS. The Index page, Personal Information page,
+                Book Information page, and Change Passoword page are developed by Lifu. What is more, Lifu also develops some css code. In addition, Lifu also develops some JS code,
+                which are used in the all website, like cookie JS code, and Loading information JS code.
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class = "footer">
+        <div class = "footer_nav">
+			<span class = "fright">
+				<a href = "../StaticPage/AboutUs.html">About Us</a>
+				<a href = "../StaticPage/Developer.html">Developer</a>
+				<a href = "../StaticPage/LibraryRule.html">Library Rule</a>
+				<a href = "../StaticPage/Help.html">Help</a>
+			</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../General/AccountClick.js"></script>
+<script type="text/javascript" src="../General/Logout.js"></script>
+<script type="text/javascript" src="../General/PersonPageClick.js"></script>
+
+</body>
+</html>

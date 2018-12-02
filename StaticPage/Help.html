@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../Account/PersonalPage.css">
+    <link rel="stylesheet" type="text/css" href="../Register/Register.css">
+    <link rel="stylesheet" type="text/css" href="AboutUs.css">
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.2.1.js"></script>
+    <script type="text/javascript" src ="../Account/Loading.js"></script>
+</head>
+<body onload="load()">
+<div id = "db_global_nav" class = "db_global_nav" >
+    <div class = "bd">
+        <div class = "top_nav_left">
+            <a href = "http://www.clemson.edu/" class = "nav_clemson">Clemson University</a>
+        </div>
+
+        <div class = "top_nav_right">
+            <a href = "../Login/login.html" class = "nav_login" id = "Login">Login</a>
+            <a href = "../Register/Register.html" class = "nav_register" id = "Register">Register</a>
+            <div class = "account-box" id = "account-box" onmouseleave="divObj.hidden()" >
+                <a href = "#" class = "account" id = "account" onclick="divObj.show()"></a>
+                <div class = "table-box" id = "table-box">
+                    <table class = "account-table" id = "account-table" cellpadding = "0" cellspacing= "0">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <a href = "#" onclick="myPersonalPage.pageClick()">Personal Page</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href = "../Index/Index.html" >Index Page</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href = "#" onclick="myLogout.out()">Logout</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id = "nav-sns" class = "nav-sns">
+</div>
+
+<div id = "wrapper" class = "wrapper">
+    <div id = "content" class = "content">
+        <h1>Help Center</h1>
+        <div class = "main-content">
+            <span class = "wrap">
+                <h3>About Account</h3>
+            </span>
+            <div class = "indent">
+                <strong>If you have a problem with your account balance:&nbsp;&nbsp;</strong>You should communicate with the administrator in the nearest library as soon as possible.
+                <br>
+                <br>
+                <strong>If your account is illegally logged in:&nbsp;&nbsp;</strong>You should change your password immediately and get in touch with our Cyber Security Center.
+                <br>
+                <br>
+                <strong>If you are about to graduate, there are still many account balances:&nbsp;&nbsp;</strong>We will send you a check within a week of leaving school.
+                <br>
+                <br>
+                <strong>If you have insufficient account balance before graduation:&nbsp;&nbsp;</strong> Please pay off the balance even before graduation.
+                <br>
+                <br>
+            </div>
+            <span class = "wrap">
+                <h3>How To Contact Help Center</h3>
+            </span>
+            <div class = "indent">
+                <strong>Location:&nbsp;&nbsp;</strong>E100-20
+                <br>
+                <br>
+                <strong>Email:&nbsp;&nbsp;</strong>HelpCenter@clemson.edu
+                <br>
+                <br>
+                <strong>Phone:&nbsp;&nbsp;</strong>8649862929
+                <br>
+                <br>
+                <strong>Rule:&nbsp;&nbsp;</strong> If you send an email or call us, please try to describe your problem clearly.
+                Otherwise we will have a hard time dealing with your problem quickly.
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class = "footer">
+        <div class = "footer_nav">
+			<span class = "fright">
+				<a href = "../StaticPage/AboutUs.html">About Us</a>
+				<a href = "../StaticPage/Developer.html">Developer</a>
+				<a href = "../StaticPage/LibraryRule.html">Library Rule</a>
+				<a href = "../StaticPage/Help.html">Help</a>
+			</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../General/AccountClick.js"></script>
+<script type="text/javascript" src="../General/Logout.js"></script>
+<script type="text/javascript" src="../General/PersonPageClick.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+ <!--<!DOCTYPE html> -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Library System Register</title>
+	<link rel="icon" href="../images/Logo.png" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="Register.css">
+	<script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../jquery-3.2.1.js"></script>
+</head>
+
+<body>
+	<div class = "header">
+		<div class = "nav_logo">
+			<div class = "logo">
+				<a href ="http://www.clemson.edu/">
+					<img src="../images/ClemsonLogo.png" alt = "">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class = "wrapper">
+		<h1>
+			Welcome Clemson Library
+		</h1>
+		<div class = "main">
+			<form method = "post" name = "registerForm">
+				<div class = "item">
+					<label>Name</label>
+					<input id = "username" name = "username" type = "text" class = "basic_input" tabindex = "1" maxlength = "20" placeholder = "Username">
+					<div id = "name_error" class = "val_error"></div>
+				</div>
+				<div class = "item">
+					<label>ID</label>
+					<input id = "ID" name = "ID" type = "text" class = "basic_input" tabindex = "2" maxlength = "9" placeholder = "TigerOneCard" value>
+					<div id = "ID_error" class = "val_error"></div>
+				</div>
+				<div class = "item">
+					<label>Type</label>
+					<span>
+						<input name="type" type="radio" value="Professor" />Professor
+						<input name="type" type="radio" value="Student" checked/>Studnet
+					</span>
+				</div>
+				<div class = "item">
+					<label>Password</label>
+					<input id = "password" name = "password" type = "password" class = "basic_input" tabindex = "3" maxlength = "20" placeholder = "at least 1 capital letter">
+					<div id = "password_error" class = "val_error"></div>
+				</div>
+				<div class = "item">
+					<label>Confirm</label>
+					<input id = "confirm" name = "confirm" type = "password" class = "basic_input" tabindex = "4" maxlength = "20" placeholder = "Confirm password">
+					<div id = "confirm_error" class = "val_error"></div>
+				</div>
+				<div class = "item">
+					<label>Phone</label>
+					<input id = "phone" name  = "phone" type = "text" class = "basic_input" tabindex = "5" maxlength = "10" placeholder = "Phone number" value>
+					<div id = "phone_error" class = "val_error"></div>
+				</div>
+				<div class = "item">
+					<label>Email</label>
+					<input id = "email" name  = "email" type = "text" class = "basic_input" tabindex = "6" maxlength = "60" placeholder = "Name@example.com" value>
+					<div id = "email_error" class = "val_error"></div>
+				</div>
+				<div class = "item">
+					<label>VerifyCode</label>
+					<input id = "verify-code" name  = "verify-code" type = "text" class = "basic_input" tabindex = "6" maxlength = "30" placeholder = "Verify Code" value>
+					<div id = "verify_error" class = "val_error"></div>
+				</div>
+				<div class = "item_submit">
+					<!--<label>&nbsp;</label>-->
+					<input type = "button" name = "verify_submit" id = "verify_submit" value = "Verify" class = "register_submit" onclick="verifyCode.emailVerify()">
+					<label>&nbsp;</label>
+					<input type = "button" name = "register_submit" id = "register_submit" value = "Register" class = "register_submit">
+				</div>
+			</form>
+		</div>
+		<div class = "left">
+			<ul class = "left_nav">
+				<li>
+					>&nbsp;Have already an account?
+					<a rel = "nofollow" href = "../Login/login.html">Login</a>
+				</li>
+				<li>
+					>&nbsp;
+					<a href = "#">Click to download Clemson Library mobile app</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class = "footer">
+		<div class = "footer_nav">
+			<span class = "fright">
+				<a href = "../StaticPage/AboutUs.html">About Us</a>
+				<a href = "../StaticPage/Developer.html">Developer</a>
+				<a href = "../StaticPage/LibraryRule.html">Library Rule</a>
+				<a href = "../StaticPage/Help.html">Help</a>
+			</span>
+		</div>
+	</div>
+	<script type="text/javascript" src="Register.js"></script>
+	<script type="text/javascript" src="VerifyCode.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

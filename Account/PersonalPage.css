@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*body {*/
+    /*width: 100%;*/
+    /*background: #f3f3f3;*/
+    /*background-color: #f4f4f4;*/
+    /*background: linear-gradient(to bottom,#522D80 0,#F66733 100%);*/
+/*}*/
+
+body{
+    font: 13px Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.db_global_nav{
+    height: 28px;
+    min-width: 1024px;
+    background-color: black;
+    font: 12px Helvetica,Arial,sans-serif;
+    line-height: 1.62;
+    font-size: 16px;
+}
+
+.db_global_nav .top_nav_left{
+    float:left;
+    width: 700px;
+    margin: 0 0 0 12px;
+}
+
+.db_global_nav .top_nav_left a{
+    display: inline-block;
+    margin:0;
+    padding: 0 12px;
+    height: 28px;
+    color: white;
+    line-height: 28px;
+}
+
+.db_global_nav .top_nav_right {
+    float: right;
+    margin: 0 12px 0 0;
+}
+
+.db_global_nav .top_nav_right a{
+    display: inline-block;
+    float: left;
+    margin:0;
+    padding: 0 12px;
+    height: 28px;
+    line-height: 28px;
+    color: white;
+    vertical-align: middle;
+}
+
+.db_global_nav .top_nav_right .account-box{
+    display: none;
+    position: relative;
+}
+
+.db_global_nav .top_nav_right .account-box .table-box{
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    width: 150px;
+    display: block;
+    padding: 10px 0;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    opacity: 0.5;
+    white-space: nowrap;
+    top: 28px;
+    display: none;
+}
+
+.db_global_nav .top_nav_right .account-box .table-box tbody{
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+.db_global_nav .top_nav_right .account-box .table-box tr{
+    display: table-row;
+    vertical-align: inherit;
+}
+
+.db_global_nav .top_nav_right .account-box .table-box td{
+    font-size: 14px;
+}
+
+.db_global_nav .top_nav_right .account-box .table-box a{
+    color: black;
+    display: block;
+    padding: 0 20px;
+    line-height: 28px;
+}
+
+.db_global_nav .top_nav_right .account-box .table-box .account-table{
+    width: 100%;
+    white-space: nowrap;
+    border-collapse: collapse;
+}
+
+.nav-sns{
+    position: relative;
+    zoom: 1;
+    background: #F66733;
+    width: 100%;
+    height: 74px;
+    min-width: 1024px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.wrapper{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.wrapper .content{
+    word-wrap: break-word;
+    min-height: 700px;
+    position: relative;
+}
+
+.wrapper .content .left-content{
+    /*float: left;*/
+    padding-right: 10px;
+    position: absolute;
+}
+
+.wrapper .content .left-content .db-usr-profile{
+    position: relative;
+    height: 48px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.wrapper .content .left-content .db-usr-profile .file_upload_button{
+    margin-right: 20px;
+}
+
+.wrapper .content .left-content .db-usr-profile .pic-box{
+    float: left;
+    margin-bottom: 18px;
+    margin-right: 12px;
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.wrapper .content .left-content .db-usr-profile .pic-box .my-profile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    background-size: 100%;
+}
+
+.wrapper .content .left-content .db-usr-profile .user-name-box{
+    float: none;
+    display: inline-block;
+}
+
+.wrapper .content .left-content .db-usr-profile .user-name-box h1{
+    font-size: 26px;
+}
+
+.wrapper .content .left-content .user-infor-box{
+    width: 650px;
+    height: 500px;
+    border-right: 1px dashed rgba(82,45,128,1);
+}
+
+.wrapper .content .left-content .user-infor-box .item{
+    margin: 15px 0;
+    clear: both;
+    height: 40px;
+}
+
+.wrapper .content .left-content .user-infor-box label{
+    text-align: center;
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    width: 100px;
+    font-size: 18px;
+    line-height: 40px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.wrapper .content .left-content .user-infor-box .permanent{
+    display: inline-block;
+    /*width: 250px;*/
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.wrapper .content .left-content .user-infor-box .item .basic-input{
+    width: 200px;
+    padding: 5px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid black;
+    display: none;
+}
+
+.wrapper .content .left-content .user-infor-box .item .my-button,
+.db-usr-profile .file_upload_button{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 20px;
+    background-color: #3fa156;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-left: 10px;
+    display: none;
+    border: none;
+    outline: none;
+}
+
+.wrapper .content .left-content .user-infor-box .item a{
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    color: rgba(82,45,128,1);
+}
+
+.history-record{
+    position: absolute;
+    left: 662px;
+}
+
+.history-record .history-record-box{
+    /*position: absolute;*/
+    max-height: 550px;
+    /*overflow: scroll;*/
+    white-space: nowrap;
+    overflow-y:auto;
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+    width: 280px;
+    margin: 15px 0 15px 0;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.history-record .history-record-box .book-item{
+    border-bottom: 1px solid #dedede;
+    /*border-right: 1px solid #dedede;*/
+    /*border-left: 1px solid #dedede;;*/
+    margin: 2px;
+    padding: 0 1em 1em 0;
+    position: relative;
+}
+
+.history-record .history-record-box .book-item .record-book-cover{
+    background: none;
+    width: 65px;
+    height: 97px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.history-record .history-record-box .book-item .record-book-cover .record-book-img{
+    width: 65px;
+    height: 97px;
+    border-width: 0;
+    vertical-align: middle;
+}
+
+.history-record .history-record-box .book-item .record-detail{
+    min-width: 0;
+    flex: 1;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.history-record .history-record-box .book-item .record-detail .record-title{
+    font-size: 14px;
+    font-weight: 500;
+    overflow: visible;
+    position: relative;
+    top: -1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+}
+
+.history-record .history-record-box .book-item .record-detail .record-title .record-title-a{
+    display: inline;
+    vertical-align: middle;
+    line-height: 1.5;
+    color: rgba(82,45,128,1);
+    text-decoration: none;
+}
+
+.history-record .history-record-box .book-item .record-detail .record-time{
+    margin: 2px 0;
+    line-height: 1.5;
+}
+
+.history-record .history-record-box .book-item .record-detail .record-time span{
+    /*color: #7b7b7b;*/
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.history-time-table {
+    display: inline-block;
+    position: absolute;
+    right: 360px;
+}
+
+.select-time-box{
+    position: relative;
+}
+
+.select-time-box .time-table-box{
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    display: block;
+    padding: 10px 0;
+    border: 1px solid #e6e6e6;
+    background: #dedede;
+    /*opacity: 0.7;*/
+    white-space: nowrap;
+    top: 15px;
+    /*display: none;*/
+}
+
+.select-time-box .time-table-box a{
+    color: #000;
+}
+
+/*.select-time-box .select-button{*/
+    /*cursor: pointer;*/
+    /*font-size: 10px;*/
+    /*font-weight: bold;*/
+    /*padding: 6px 20px;*/
+    /*background-color: #F66733;;*/
+    /*color: #ffffff;*/
+    /*!*border-radius: 5px;*!*/
+    /*margin-left: 10px;*/
+    /*width: 80px;*/
+    /*padding: 8.5px;*/
+    /*position: absolute;*/
+    /*outline: none;*/
+    /*border: none;*/
+/*}*/
+

@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+.wrapper .main form .login_submit{
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 6px 20px;
+	background-color: #3fa156;
+	color: #ffffff;
+	border-radius: 5px;
+	border: none;
+	margin-right: 20px;
+	outline: none;
+
+}
+
+
+.footer_login{
+	width: 950px;
+	margin: 300px auto 40px;
+	border-top: 1px dashed rgba(82,45,128,1);
+	overflow: hidden;
+}
+
+.footer_login .footer_nav{
+	padding-top: 6px;
+	display: inline-block;
+	float: right;
+}
+
+.footer_login .footer_nav .fright{
+	float: right;
+}
+
+.footer_login .footer_nav .fright a{
+	color: #369;
+	margin-left: 10px;
+	height: 20px;
+}

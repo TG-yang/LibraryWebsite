@@ -1,0 +1,136 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library System Index</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="Index.css">
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.2.1.js"></script>
+    <script type="text/javascript" src ="Loading.js"></script>
+</head>
+<body onload="myLoad.load()">
+    <div id = "db_global_nav" class = "db_global_nav" >
+        <div class = "bd">
+            <div class = "top_nav_left">
+                <a href = "http://www.clemson.edu/" class = "nav_clemson">Clemson University</a>
+            </div>
+
+            <div class = "top_nav_right">
+                <a href = "../Login/login.html" class = "nav_login" id = "Login">Login</a>
+                <a href = "../Register/Register.html" class = "nav_register" id = "Register">Register</a>
+                <div class = "account-box" id = "account-box" onmouseleave="divObj.hidden()" >
+                    <a href = "#" class = "account" id = "account" onclick="divObj.show()"></a>
+                    <div class = "table-box" id = "table-box">
+                        <table class = "account-table" id = "account-table" cellpadding = "0" cellspacing= "0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href = "#" onclick="myPersonalPage.pageClick()">Personal Page</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href = "Index.html" >Index page</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href = "#" onclick="myLogout.out()">Logout</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id = "db_nav_book" class = "db_nav_book">
+        <div class="search-panel">
+            <form action="" method="get">
+                <div class="btn">
+                    <input type="button" id = "search-button" class = "search-button" onclick="mySearch.searchResult('book-input')" value="Search">
+                </div>
+                <div class="search-inp-box">
+                    <div class="search-inp">
+                        <input type="text" id = "book-input" placeholder="Bookname">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id = "middle_nav" class = "middle_nav">
+        <div id = "middle_nav_box" class = "middle_nav_box">
+            <!--<ul id = "menu-main-menu-1" class = "menu-main-menu-1">-->
+                <!--<li>-->
+                    <!--<a href = "#" id = "Services">Services</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href = "#" id = "Locations">Locations</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href = "#" id = "News">News</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href = "#" id = "AboutUs">About Us</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </div>
+    </div>
+    <div id = "middle_line" class = "middle_line"></div>
+    <div id = "content_main" class = "content_main">
+        <div class = "location_hours">
+            <h2>
+                <p>Hours & locations</p>
+            </h2>
+            <div class = "location-box">
+
+            </div>
+
+            <div class = "extra">
+                <a href = "#">View Map</a>
+                <a href = "#">Find a study place</a>
+                <p>Quiet, group, and 24/7 study spaces available</p>
+            </div>
+        </div>
+
+        
+        <div id = "newbooks_box" class = "newbooks_box">
+            <div class = "hd">
+                <h2>
+                    <span class = "newbooks">New Books</span>
+                </h2>
+            </div>
+            <div class = "bd">
+                <ul class = "list-col">
+                </ul>
+            </div>
+            <div class = "bd2">
+
+            </div>
+        </div>
+
+        <div id = "about-library" class = "about-library">
+            <h3>Do you really know Clemson Library?</h3>
+            <ol>
+                <li>The Clemson University Libraries serve as the portal to scholarly information and discovery.</li>
+                <li>People can access to thousands of journals and books with electronic.</li>
+                <li>The library provides access to collections that support research, innovation and learning.</li>
+                <li>The library add new digital media collections, printed materials, maps and audio/visual recordings every year.</li>
+            </ol>
+        </div>
+    </div>
+    <div id = "search-result" class = "search-result">
+        <div class = "search-result-box">
+
+        </div>
+    </div>
+    <script type="text/javascript" src="../General/AccountClick.js"></script>
+    <script type="text/javascript" src="../General/Logout.js"></script>
+    <script type="text/javascript" src="../General/PersonPageClick.js"></script>
+    <script type="text/javascript" src="SearchBook.js"></script>
+</body>
+</html>

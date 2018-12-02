@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Administer</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../Account/PersonalPage.css">
+    <link rel="stylesheet" type="text/css" href="../Register/Register.css">
+    <link rel="stylesheet" type="text/css" href="MainAdminister.css">
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.2.1.js"></script>
+    <script type="text/javascript" src ="../Account/Loading.js"></script>
+</head>
+<body>
+<div id = "db_global_nav" class = "db_global_nav" >
+    <div class = "bd">
+        <div class = "top_nav_left">
+            <a href = "http://www.clemson.edu/" class = "nav_clemson">Clemson University</a>
+        </div>
+
+        <div class = "top_nav_right">
+            <a href = "#" class = "nav_login" id = "Login">admin@gmail.com</a>
+            <div class = "account-box" id = "account-box" onmouseleave="divObj.hidden()" >
+                <a href = "#" class = "account" id = "account" onclick="divObj.show()"></a>
+                <!--<div class = "table-box" id = "table-box">-->
+                    <!--<table class = "account-table" id = "account-table" cellpadding = "0" cellspacing= "0">-->
+                        <!--<tbody>-->
+                        <!--<tr>-->
+                            <!--<td>-->
+                                <!--<a href = "#" onclick="myLogout.out()">Logout</a>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                    <!--</table>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id = "nav-sns" class = "nav-sns">
+</div>
+
+<div id = "wrapper" class = "wrapper">
+    <div id = "content" class = "content">
+        <div id = "left-side" class = "left-side">
+            <ul id = "section-tabs">
+                <li class = "section">
+                    <a href = "#" title = "HOME" class = "active" id = "Home" tabindex="0" onclick="ChangePage.myPage(this.id)">HOME</a>
+                </li>
+                <li class = "section">
+                    <a href = "#" title = "ADD BOOK" class = "" id = "Add_Book" tabindex="1" onclick="ChangePage.myPage(this.id)">ADD BOOK</a>
+                </li>
+                <li class = "section">
+                    <a href = "#" title = "DELETE BOOK" class = "" id = "Delete_Book" tabindex="2" onclick="ChangePage.myPage(this.id)">DELETE BOOK</a>
+                </li>
+                <li class = "section">
+                    <a href = "#" title = "EDIT BOOK" class = "" id = "Edit_Book" tabindex="3" onclick="ChangePage.myPage(this.id)">EDIT BOOK</a>
+                </li>
+                <li class = "section">
+                    <a href = "#" title = "BORROW BOOK" class = "" id = "Borrow_Book" tabindex="4" onclick="ChangePage.myPage(this.id)">BORROW BOOK</a>
+                </li>
+                <li class = "section">
+                    <a href = "#" title = "RETURN BOOK" class = "" id = "Return_Book" tabindex="5" onclick="ChangePage.myPage(this.id)">RETURN BOOK</a>
+                </li>
+                <li class = "section">
+                    <a href = "#" title = "STUDENT RECHARGE" class = "" id = "Student_Recharge" tabindex="6" onclick="ChangePage.myPage(this.id)">STUDENT RECHARGE</a>
+                </li>
+                <li class = "section">
+                    <a href = "#" title = "ADD LIBRARY" class = "" id = "Add_Library" tabindex="7" onclick="ChangePage.myPage(this.id)">ADD LIBRARY</a>
+                </li>
+                <li class = "section">
+                    <a href = "#" title = "EDIT LIBRARY" class = "" id = "Edit_Library" tabindex="8" onclick="ChangePage.myPage(this.id)">EDIT LIBRARY</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id = "right-side" class = "right-side">
+            <div class = "home-page" id = "home-page">
+                <div class = "logo-box" class = "logo-box">
+                    <a href="http://www.clemson.edu/">
+                        <img src="../images/ClemsonLogo.png">
+                    </a>
+                </div>
+                <div class = "main-content">
+                    <div id = "right-content" class = "right-content">
+                        <h3>What should you do as a librarian?</h3>
+                        <ol>
+                            <li>If the library business hours change, please update it.</li>
+                            <li>Punish people according to the damage of the book when people return books</li>
+                            <li>The fine is up to the price of the book, the minimum is 1 dollar</li>
+                            <li>When Borrower borrows books, please proceed with this process according to the ISBN of the book.</li>
+                            <li>If the book is damaged and there are no extra copies, please delete the book.</li>
+                            <li>According to the position of the book in the library after the people return the book, the administrator should put the book in the designated position in time.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class = "backup-recover">
+                    <h3>How to backup and recover library system database?</h3>
+                    <ol>
+                        <li>At first, you can click recover button to recover the database to the most recent backup.</li>
+                        <li>We recommend that you make a backup when there is a major change in the library.</li>
+                        <li>When you click backup button, the data will be stored as .csv file and those files will be saved in the server.</li>
+                    </ol>
+                    <input class = "select-button" type='button' value='Backup' onClick="Backup.Backup()"/>
+                    <input class = "select-button" type='button' value='Recover' onClick="Recover.Recover()"/>
+                </div>
+
+            </div>
+
+            <div class = "add-book" id = "add-book">
+                <div class = "basic-info">
+                    <div class = "item">
+                        <label>BookName</label>
+                        <input id = "bookname" name = "bookname" type = "text" class = "basic_input" tabindex = "1" maxlength = "100" placeholder = "BookName">
+                    </div>
+                    <div class = "item">
+                        <label>Author</label>
+                        <input id = "author" name = "author" type = "text" class = "basic_input" tabindex = "2" maxlength = "100" placeholder = "Author">
+                    </div>
+                    <div class = "item">
+                        <label>Year</label>
+                        <input id = "publication-year" name = "publication-year" type = "text" class = "basic_input" tabindex = "3" maxlength = "30" placeholder = "Year-Month-Day (Must)">
+                    </div>
+                    <div class = "item">
+                        <label>Publisher</label>
+                        <input id = "publisher" name = "publisher" type = "text" class = "basic_input" tabindex = "4" maxlength = "100" placeholder = "Publisher">
+                    </div>
+                    <div class = "item">
+                        <label>Page</label>
+                        <input id = "page" name = "page" type = "text" class = "basic_input" tabindex = "5" maxlength = "30" placeholder = "Page">
+                    </div>
+                    <div class = "item">
+                        <label>Location</label>
+                        <input id = "location" name = "location" type = "text" class = "basic_input" tabindex = "6" maxlength = "30" placeholder = "Location">
+                    </div>
+                    <div class = "item">
+                        <label>ISBN</label>
+                        <input id = "ISBN" name = "ISBN" type = "text" class = "basic_input" tabindex = "7" maxlength = "30" placeholder = "ISBN">
+                    </div>
+                    <div class = "item">
+                        <label>Quantity</label>
+                        <input id = "quantity" name = "quantity" type = "text" class = "basic_input" tabindex = "8" maxlength = "30" placeholder = "Quantity">
+                    </div>
+                </div>
+
+                <div id = "book-pic-box" class = "book-pic-box">
+                    <h2>Book Profile</h2>
+                    <div id = "book-profile-box" class = "book-profile-box">
+                        <label for="file" title="Click to change profile" id = "pic" class = "pic" onclick="modifyProfile.buttonDisplay()">
+                            <img id = "my-profile" class = "my-profile" alt = "Book Profile" src = "../book-profile/normal.jpg">
+                        </label>
+                        <input type="file" id="file" name="file" style="display: none"/>
+                    </div>
+                </div>
+
+                <div id = "about-author-box" class = "about-author-box">
+                    <h2>About Author</h2>
+                    <textarea id = "about-author" class = "about-author" placeholder="Less than 100 words"></textarea>
+                </div>
+
+                <div id = "about-intro-box" class = "about-intro-box">
+                    <h2>Introduction</h2>
+                    <textarea id = "about-intro" class = "about-intro" placeholder="Less than 200 words"></textarea>
+                </div>
+
+                <div id = "submit-box" class = "submit-box">
+                    <!--<input type="button" id = "submit-button" class = "submit-button" value = "Submit" onclick="addBook.myAdd()">-->
+                    <button id = "submit-button" class = "submit-button" onclick="addBook.myAdd()">SUBMIT</button>
+                </div>
+            </div>
+
+            <div class = "delete-book" id = "delete-book">
+                <div class = "input-box">
+                    <div class = "item">
+                        <label>ISBN</label>
+                        <input id = "delete-book-ISBN" name = "borrower-ISBN" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" placeholder = "Book ISBN" oninput="myBind.inputBind(this.id,'delete-profile')">
+                    </div>
+                </div>
+                <div class = "book-pic-box">
+                    <h2>Book Profile</h2>
+                    <div class = "book-profile-box">
+                        <img id = "delete-profile" class = "my-profile" alt = "Book Profile" src = "../book-profile/normal.jpg">
+                    </div>
+                </div>
+                <div class = "submit-box">
+                    <!--<input type="button" id = "delete-button" class = "submit-button" value = "DELETE" onclick="myDelete.deleteBook()">-->
+                    <button id = "delete-button" class = "submit-button" onclick="myDelete.deleteBook()">DELETE</button>
+                </div>
+            </div>
+
+            <div class = "edit-book" id = "edit-book">
+                <div class = "input-box">
+                    <div class = "item">
+                        <label>ISBN</label>
+                        <input id = "edit-book-ISBN" name = "borrower-ISBN" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" placeholder = "Book ISBN" oninput="myBind.inputBind(this.id,'edit-profile')">
+                    </div>
+                </div>
+                <div class = "book-pic-box">
+                    <h2>Book Profile</h2>
+                    <div class = "book-profile-box">
+                        <img id = "edit-profile" class = "my-profile" alt = "Book Profile" src = "../book-profile/normal.jpg">
+                    </div>
+                </div>
+                <div class = "submit-box">
+                    <!--<input type="button" id = "edit-button" class = "submit-button" value = "EDIT" onclick="myEdit.editButton()">-->
+                    <button id = "edit-button" class = "submit-button" onclick="myEdit.editButton()">EDIT</button>
+                </div>
+            </div>
+
+            <div class = "edit-book-detail" id = "edit-book-detail">
+                <div class = "basic-info">
+                    <div class = "item">
+                        <label>BookName</label>
+                        <input id = "edit-bookname" name = "bookname" type = "text" class = "basic_input" tabindex = "1" maxlength = "100" placeholder = "BookName">
+                    </div>
+                    <div class = "item">
+                        <label>Author</label>
+                        <input id = "edit-author" name = "author" type = "text" class = "basic_input" tabindex = "2" maxlength = "100" placeholder = "Author">
+                    </div>
+                    <div class = "item">
+                        <label>Publisher</label>
+                        <input id = "edit-publisher" name = "edit-publisher" type = "text" class = "basic_input" tabindex = "3" maxlength = "30" placeholder = "Publisher">
+                    </div>
+                    <div class = "item">
+                        <label>Year</label>
+                        <input id = "edit-publication-year" name = "publication-year" type = "text" class = "basic_input" tabindex = "3" maxlength = "100" placeholder = "Year-Month-Day (Must)">
+                    </div>
+                    <div class = "item">
+                        <label>Page</label>
+                        <input id = "edit-page" name = "page" type = "text" class = "basic_input" tabindex = "4" maxlength = "30" placeholder = "Page">
+                    </div>
+                    <div class = "item">
+                        <label>Location</label>
+                        <input id = "edit-location" name = "location" type = "text" class = "basic_input" tabindex = "5" maxlength = "30" placeholder = "Location">
+                    </div>
+                    <div class = "item">
+                        <label>ISBN</label>
+                        <input id = "edit-ISBN" name = "ISBN" type = "text" class = "basic_input" tabindex = "6" maxlength = "30" placeholder = "ISBN" readonly="readonly">
+                    </div>
+                    <div class = "item">
+                        <label>Quantity</label>
+                        <input id = "edit-quantity" name = "quantity" type = "text" class = "basic_input" tabindex = "7" maxlength = "30" placeholder = "Quantity">
+                    </div>
+                </div>
+
+                <div id = "edit-book-pic-box" class = "book-pic-box">
+                    <h2>Book Profile</h2>
+                    <div id = "edit-book-profile-box" class = "book-profile-box">
+                        <label for="edit-file" title="Click to change profile" id = "edit-pic" class = "pic" onclick="modifyProfile.buttonDisplay()">
+                            <img id = "edit-my-profile" class = "my-profile" alt = "Book Profile" src = "../book-profile/normal.jpg">
+                        </label>
+                        <input type="file" id="edit-file" name="edit-file" style="display: none" />
+                    </div>
+                </div>
+
+                <div id = "edit-about-author-box" class = "about-author-box">
+                    <h2>About Author</h2>
+                    <textarea id = "edit-about-author" class = "about-author" placeholder="less than 100 words"></textarea>
+                </div>
+
+                <div id = "edit-about-intro-box" class = "about-intro-box">
+                    <h2>Introduction</h2>
+                    <textarea id = "edit-about-intro" class = "about-intro" placeholder="less than 200 words"></textarea>
+                </div>
+
+                <div id = "edit-submit-box" class = "submit-box">
+                    <input type="button" id = "edit-submit-button" class = "submit-button" value = "Submit" onclick="myEdit.editSubmit()">
+                </div>
+            </div>
+
+            <div class = "borrow-book" id = "borrow-book">
+                <div class = "input-box">
+                    <div class = "item">
+                        <label>ISBN</label>
+                        <input id = "borrow-book-ISBN" name = "borrower-ISBN" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" placeholder = "Book ISBN" oninput="myBind.inputBind(this.id,'borrow-profile')">
+                    </div>
+                    <div class = "item">
+                        <label>ID</label>
+                        <input id = "borrower-ID" name = "borrower-ID" type = "text" class = "basic_input" tabindex = "2" maxlength = "30" placeholder = "Borrower ID">
+                    </div>
+                </div>
+                <div class = "book-pic-box">
+                    <h2>Book Profile</h2>
+                    <div class = "book-profile-box">
+                        <img id = "borrow-profile" class = "my-profile" alt = "Book Profile" src = "../book-profile/normal.jpg">
+                    </div>
+                </div>
+                <div class = "submit-box">
+                    <!--<input type="button" id = "borrow-button" class = "submit-button" value = "BORROW" onclick="myBorrow.borrowBook('borrow-book-ISBN','borrower-ID')">-->
+                    <button id = "borrow-button" class = "submit-button" onclick="myBorrow.borrowBook('borrow-book-ISBN','borrower-ID')">BORROW</button>
+                </div>
+            </div>
+
+            <div class = "return-book" id = "return-book">
+                <div class = "input-box">
+                    <div class = "item">
+                        <label>ISBN</label>
+                        <input id = "return-book-ISBN" name = "borrower-ISBN" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" placeholder = "Book ISBN" oninput="myBind.inputBind(this.id,'return-profile')">
+                    </div>
+                    <div class = "item">
+                        <label>ID</label>
+                        <input id = "returner-ID" name = "returner-ID" type = "text" class = "basic_input" tabindex = "2" maxlength = "30" placeholder = "Borrower ID">
+                    </div>
+                    <div class = "item">
+                        <label>Fine</label>
+                        <input id = "fine" name = "fine" type = "text" class = "basic_input" tabindex = "3" maxlength = "30" placeholder = "Fine">
+                    </div>
+                </div>
+                <div class = "book-pic-box">
+                    <h2>Book Profile</h2>
+                    <div class = "book-profile-box">
+                        <img id = "return-profile" class = "my-profile" alt = "Book Profile" src = "../book-profile/normal.jpg">
+                    </div>
+                </div>
+                <div class = "submit-box">
+                    <!--<input type="button" id = "return-button" class = "submit-button" value = "RETURN" onclick="myReturn.returnBook('return-book-ISBN','returner-ID')">-->
+                    <button id = "return-button" class = "submit-button" onclick="myReturn.returnBook('return-book-ISBN','returner-ID','fine')">RETURN</button>
+                </div>
+            </div>
+
+            <div class = "student-recharge" id = "student-recharge">
+                <div class = "input-box">
+                    <div class = "item">
+                        <label>ID</label>
+                        <input id = "recharge-ID" name = "recharge-ID" type = "text" class = "basic_input" tabindex="1" maxlength= "30" placeholder="Student ID" oninput="myBind.stuInputBind(this.id,'my-deposit')">
+                    </div>
+                    <div class = "item">
+                        <label>Recharge</label>
+                        <input id = "recharge-money" name = "recharge-money" type = "text" class = "basic_input" tabindex="1" maxlength= "30" placeholder="Recharge Money">
+                    </div>
+                </div>
+                <div class = "deposit-box" id = "deposit-box">
+                    <label>Deposit</label>
+                    <span id = "my-deposit" class = "my-deposit">10</span>
+                    <span>USD</span>
+                </div>
+                <div class = "submit-box">
+                    <!--<input type="button" id = "recharge-button" class = "submit-button" value = "CONFIRM" onclick="myRecharge.stuRecharge('recharge-ID','recharge-money','my-deposit')">-->
+                    <button id = "recharge-button" class = "submit-button" onclick="myRecharge.stuRecharge('recharge-ID','recharge-money','my-deposit')">CONFIRM</button>
+                </div>
+            </div>
+
+            <div class = "add-library" id = "add-library">
+                <div class = "input-box">
+                    <div class = "item">
+                        <label>Library Name</label>
+                        <input id = "library-name" name = "library-name" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" placeholder = "Library Name">
+                    </div>
+                    <div class = "item">
+                        <label>Position</label>
+                        <input id = "library-position" name = "library-position" type = "text" class = "basic_input" tabindex = "2" maxlength = "30" placeholder = "Library Position">
+                    </div>
+                    <div class = "item">
+                        <label>Hours</label>
+                        <input id = "library-hours" name = "library-hours" type = "text" class = "basic_input" tabindex = "2" maxlength = "30" placeholder = "Library Hours">
+                    </div>
+                    <div class = "item">
+                        <label>Phone</label>
+                        <input id = "library-phone" name = "library-phone" type = "text" class = "basic_input" tabindex = "2" maxlength = "10" placeholder = "Library Phone">
+                    </div>
+
+                    <div id = "library-pic-box" class = "book-pic-box">
+                        <h2>Library Profile</h2>
+                        <div id = "library-cover-box" class = "book-profile-box">
+                            <label for="library-file" title="Click to change profile" id = "library-pic" class = "pic" onclick="modifyProfile.buttonDisplay()">
+                                <img id = "library-profile" class = "my-profile" alt = "Book Profile" src = "../book-profile/normal.jpg">
+                            </label>
+                            <input type="file" id="library-file" name="library-file" style="display: none"/>
+                        </div>
+                    </div>
+
+                    <div class = "submit-box">
+                        <!--<input type="button" id = "add-library-button" class = "submit-button" value = "CONFIRM" onclick="myAddLibrary.addLibrary()">-->
+                        <button id = "add-library-button" class = "submit-button" onclick="myAddLibrary.addLibrary()">CONFIRM</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "edit-library" id = "edit-library">
+                <div class = "input-box">
+                    <div class = "item">
+                        <label>Library Name</label>
+                        <input id = "edit-library-name" name = "edit-library-name" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" placeholder = "Library Name">
+                    </div>
+                </div>
+                <div class = "submit-box">
+                    <!--<input type="button" id = "edit-library-button" class = "submit-button" value = "EDIT" onclick="editLibrary.myEdit('edit-library-name')">-->
+                    <!--<input type="button" id = "delete-library-button" class = "submit-button" value = "DELETE" onclick="editLibrary.myDelete('edit-library-name')">-->
+                    <button id = "edit-library-button" class = "submit-button" onclick="editLibrary.myEdit('edit-library-name')">EDIT</button>
+                    <button id = "delete-library-button" class = "submit-button" onclick="editLibrary.myDelete('edit-library-name')">DELETE</button>
+                </div>
+            </div>
+
+            <div class = "edit-library-detail" id = "edit-library-detail">
+                <div class = "input-box">
+                    <div class = "item">
+                        <label>Library Name</label>
+                        <input id = "edit-library-name-detail" name = "edit-library-name-detail" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" readonly="readonly">
+                    </div>
+                    <div class = "item">
+                        <label>Position</label>
+                        <input id = "edit-library-position-detail" name = "edit-library-position-detail" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" >
+                    </div>
+                    <div class = "item">
+                        <label>Hours</label>
+                        <input id = "edit-library-hours-detail" name = "edit-library-hours-detail" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" >
+                    </div>
+                    <div class = "item">
+                        <label>Phone</label>
+                        <input id = "edit-library-phone-detail" name = "edit-library-phone-detail" type = "text" class = "basic_input" tabindex = "1" maxlength = "30" >
+                    </div>
+                </div>
+
+                <div id = "edit-library-pic-box" class = "book-pic-box">
+                    <h2>Library Profile</h2>
+                    <div id = "edit-library-cover-box" class = "book-profile-box">
+                        <label for="edit-library-file" title="Click to change profile" id = "edit-library-pic" class = "pic" onclick="modifyProfile.buttonDisplay()">
+                            <img id = "edit-library-profile" class = "my-profile" alt = "Book Profile" src = "../book-profile/normal.jpg">
+                        </label>
+                        <input type="file" id="edit-library-file" name="library-file" style="display: none"/>
+                    </div>
+                </div>
+
+                <div class = "submit-box">
+                    <button id = "edit-library-confirm-button" class = "submit-button" onclick="editLibrary.myEditConfirm()">CONFIRM</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script type="text/javascript" src="../General/AccountClick.js"></script>-->
+<!--<script type="text/javascript" src="../General/Logout.js"></script>-->
+<!--<script type="text/javascript" src="../General/PersonPageClick.js"></script>-->
+<script type="text/javascript" src="Backup.js"></script>
+<script type="text/javascript" src="ChangePage.js"></script>
+<script type="text/javascript" src="BindEvent.js"></script>
+<script type="text/javascript" src="DeleteBook.js"></script>
+<script type="text/javascript" src="EditBook.js"></script>
+<script type="text/javascript" src="StudentRecharge.js"></script>
+<script type="text/javascript" src="BorrowBook.js"></script>
+<script type="text/javascript" src="ReturnBook.js"></script>
+<script type="text/javascript" src="AddLibrary.js"></script>
+<script type="text/javascript" src="EditLibrary.js"></script>
+</body>
+</html>
+
+

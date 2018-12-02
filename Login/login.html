@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library System Login</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../Register/Register.css">
+    <link rel="stylesheet" type="text/css" href="Login.css">
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.2.1.js"></script>
+</head>
+
+<body>
+<div class = "header">
+    <div class = "nav_logo">
+        <div class = "logo">
+            <a href ="http://www.clemson.edu/">
+                <img src="../images/ClemsonLogo.png" alt = "">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class = "wrapper">
+    <h1>
+        Welcome Back
+    </h1>
+
+    <div class = "main">
+        <form name = "loginForm" method = "post" >
+            <div class = "item">
+                <label>Email</label>
+                <input id = "email" name  = "email" type = "text" class = "basic_input" tabindex = "1" maxlength = "60" placeholder = "Name@example.com" value>
+                <div id = "email_error" class = "val_error"></div>
+            </div>
+            <div class = "item">
+                <label>Password</label>
+                <input id = "password" name = "password" type = "password" class = "basic_input" tabindex = "2" maxlength = "20" placeholder = "Password">
+                <div id = "password_error" class = "val_error"></div>
+            </div>
+            <div class = "item_submit">
+                <label>&nbsp;</label>
+                <input type = "button" name = "Login_submit" id = "Login_submit" value = "Login" class = "Login_submit">
+            </div>
+        </form>
+    </div>
+
+    <div class = "left">
+        <ul class = "left_nav">
+            <li>
+                >&nbsp;Have no an account
+                <a rel = "nofollow" href = "../Register/Register.html">Register</a>
+            </li>
+            <li>
+                >&nbsp;
+                <a href = "#">Click to download Clemson Library mobile app</a>
+            </li>
+            <li>
+                >Forget your password?
+                <a href = "../ForgetPassword/ForgetPassword.html">Click here</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class = "footer_login">
+    <div class = "footer_nav">
+			<span class = "fright">
+				<a href = "../StaticPage/AboutUs.html">About Us</a>
+				<a href = "../StaticPage/Developer.html">Developer</a>
+				<a href = "../StaticPage/LibraryRule.html">Library Rule</a>
+				<a href = "../StaticPage/Help.html">Help</a>
+			</span>
+    </div>
+</div>
+<script type="text/javascript" src="login.js"></script>
+</body>
+</html>

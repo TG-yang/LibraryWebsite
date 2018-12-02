@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../Account/PersonalPage.css">
+    <link rel="stylesheet" type="text/css" href="../Register/Register.css">
+    <link rel="stylesheet" type="text/css" href="AboutUs.css">
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.2.1.js"></script>
+    <script type="text/javascript" src ="../Account/Loading.js"></script>
+</head>
+<body onload="load()">
+<div id = "db_global_nav" class = "db_global_nav" >
+    <div class = "bd">
+        <div class = "top_nav_left">
+            <a href = "http://www.clemson.edu/" class = "nav_clemson">Clemson University</a>
+        </div>
+
+        <div class = "top_nav_right">
+            <a href = "../Login/login.html" class = "nav_login" id = "Login">Login</a>
+            <a href = "../Register/Register.html" class = "nav_register" id = "Register">Register</a>
+            <div class = "account-box" id = "account-box" onmouseleave="divObj.hidden()" >
+                <a href = "#" class = "account" id = "account" onclick="divObj.show()"></a>
+                <div class = "table-box" id = "table-box">
+                    <table class = "account-table" id = "account-table" cellpadding = "0" cellspacing= "0">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <a href = "#" onclick="myPersonalPage.pageClick()">Personal Page</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href = "../Index/Index.html" >Index Page</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href = "#" onclick="myLogout.out()">Logout</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id = "nav-sns" class = "nav-sns">
+</div>
+
+<div id = "wrapper" class = "wrapper">
+    <div id = "content" class = "content">
+        <h1>About Us</h1>
+        <div class = "main-content">
+            <span class = "wrap">
+                <h3>Why we develop this project</h3>
+            </span>
+            <div class = "indent">
+                　　The library is the landmark of every university, and the libraries in each university have a huge amount of books.
+                    How to make it easier for students and administrators to borrow and manage books has become an increasingly serious problem.
+                    If the problem is solved, it will further enhance the efficiency of students' learning and research,
+                    and students will no longer have to spend a lot of time looking for books.
+                <br>
+                <br>
+                　　In order to better help students, professors and administrators borrow and manage books.
+                    Our team decided to develop a book management system. Under this system,
+                    students can look for books and read the book description to find out if the book is suitable for them.
+                    If borrower decides to borrow the book,
+                    Borrower only needs to find the book according to the location of the book in the library,
+                    and then The book is submitted to the administrator,
+                    who completes the lending process based on the book's ISBN and the student's ID.
+                <br>
+                <br>
+                　　As an administrator, he can make an appropriate fine according to the availability of the book when borrower returns the book.
+                    The administrator can also put the books in the right location according to the books' information which are provided in the website.
+                    What's more, administrator also has the right to help borrower recharge.
+                    It is no hard to image that without the system, people have to use lots of paper to write down who borrow the book and each borrower's account balance.
+                <br>
+                <br>
+            </div>
+            <span class = "wrap">
+                <h3>Join Us</h3>
+            </span>
+            <div class = "indent">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you are interested in our project, you can join our team.
+                Although there are only two people, we believe that more people will join us in the future.
+                We can not only develop library systems, but we can also develop other applications.
+                In addition, we can also carry out technical exchanges so that each team member can improve programming skills faster.
+                <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at we have to say is that the two members of the team are all Chinese,
+                and our English is not very good. But we will improve our English ability as soon as possible.
+                If you don't mind this, join us!
+            </div>
+        </div>
+    </div>
+    <div class = "footer">
+        <div class = "footer_nav">
+			<span class = "fright">
+				<a href = "../StaticPage/AboutUs.html">About Us</a>
+				<a href = "../StaticPage/Developer.html">Developer</a>
+				<a href = "../StaticPage/LibraryRule.html">Library Rule</a>
+				<a href = "../StaticPage/Help.html">Help</a>
+			</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../General/AccountClick.js"></script>
+<script type="text/javascript" src="../General/Logout.js"></script>
+<script type="text/javascript" src="../General/PersonPageClick.js"></script>
+
+</body>
+</html>

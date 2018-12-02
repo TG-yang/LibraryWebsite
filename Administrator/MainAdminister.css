@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font: 13px Arial, Helvetica, sans-serif;
+    background: #ddd;
+}
+
+.wrapper{
+    min-height: 1010px;
+    min-width: 750px;
+    box-shadow: 0 0 0.9375em rgba(0,0,0,.4);
+    background: #FFF;
+    border-radius: 8px;
+
+}
+.content{
+    position: relative;
+    min-width: 750px;
+    margin: 10px 10px 0 10px;
+}
+
+.left-side{
+    position: absolute;
+    top: 0px;
+    display: inline-block;
+    width: 170px;
+    padding-right: 20px;
+}
+
+.left-side .active{
+    background-color: #522D80;
+    font-weight: bold;
+    color: #fff;
+}
+
+.left-side ul{
+    width: 170px;
+}
+
+.left-side a{
+    outline: none;
+    display: block;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.3;
+    color: #000;
+}
+
+.right-side{
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    width: 740px;
+    display: inline-block;
+    min-height: 700px;
+}
+
+.right-side .item{
+    margin: 10px 0;
+}
+
+.right-side .edit-library{
+    text-align: center;
+}
+
+.right-side .add-book,
+.right-side .borrow-book,
+.right-side .return-book,
+.right-side .student-recharge,
+.right-side .delete-book,
+.right-side .edit-book,
+.right-side .edit-book-detail,
+.right-side .add-library,
+.right-side .edit-library,
+.right-side .edit-library-detail{
+    display: none;
+}
+
+.right-side .add-book .basic-info,
+.right-side .edit-book-detail .basic-info{
+    display: inline-block;
+    padding: 0 20px 0 0;
+}
+
+.right-side .add-book .item label,
+.right-side .item label{
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    text-align: right;
+    width: 100px;
+    font-size: 16px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.right-side .add-book .item .basic_input,
+.right-side .item .basic_input{
+    outline: none;
+    width: 200px;
+    padding: 4px;
+    height: 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.right-side .add-book .book-pic-box,
+.right-side .edit-book-detail .book-pic-box{
+    display: inline-block;
+    padding: 20px 20px 0 20px;
+    top: 0;
+}
+
+.right-side .book-profile-box{
+    text-align: center;
+    margin: 3px 12px 0 0;
+    max-width: 155px;
+    overflow: hidden;
+}
+
+.right-side .book-profile-box img{
+    width: 135px;
+    max-height: 200px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.right-side .add-book .about-author-box,
+.right-side .add-book .about-intro-box{
+    margin-top: 20px;
+}
+
+.right-side .add-book textarea,
+.right-side .edit-book-detail textarea{
+    width: 700px;
+    height: 250px;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+}
+
+.right-side .add-book .submit-box{
+    padding-top: 10px;
+}
+
+.right-side .add-book .submit-button,
+.right-side .submit-button{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 20px;
+    background-color: #3fa156;
+    color: #ffffff;
+    /*border-radius: 5px;*/
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.right-side .input-box{
+    margin-top: 100px;
+}
+
+.right-side .input-box .item{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.right-side .book-pic-box{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.right-side .book-pic-box .book-profile-box{
+    margin: 0 auto;
+}
+
+.right-side .submit-box{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.right-side .student-recharge .deposit-box{
+    margin-top: 20px;
+    font-size: 16px;
+    margin-left: 85px;
+    display: none;
+}
+
+.delete-book,
+.edit-book,
+.logo-box{
+    text-align: center;
+}
+
+.right-side .home-page .logo-box{
+    margin-bottom: 20px;
+}
+.right-side .home-page .logo-box a img {
+    width: 250px;
+    height: 80px;
+}
+
+.wrapper .main-content{
+    margin: 20px;
+}
+.wrapper .right-content{
+    color: #666;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.wrapper .right-content h3{
+    font-size: 20px;
+    color: #F66733;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+
+.wrapper .right-content ol li{
+    margin-bottom: 10px;
+    color: rgba(82,45,128,1);
+    font-weight: bold;
+}
+
+.backup-recover{
+    margin: 20px;
+}
+
+.backup-recover h3{
+    font-size: 20px;
+    color: #F66733;
+    line-height: 150%;
+    margin-bottom: 20px;
+}
+
+.backup-recover ol{
+    margin-bottom: 20px;
+}
+
+.backup-recover ol li{
+    margin-bottom: 10px;
+    color: rgba(82,45,128,1);
+    font-weight: bold;
+}
+
+.backup-recover .select-button{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 20px;
+    background-color: #3fa156;
+    color: #ffffff;
+    /*border-radius: 5px;*/
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}

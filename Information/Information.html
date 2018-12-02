@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Information</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="Information.css">
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.2.1.js"></script>
+    <script type="text/javascript" src ="Loading.js"></script>
+</head>
+
+<body onload="InformationLoad.load()">
+    <div id = "db_global_nav" class = "db_global_nav" >
+        <div class = "bd">
+            <div class = "top_nav_left">
+                <a href = "http://www.clemson.edu/" class = "nav_clemson">Clemson University</a>
+            </div>
+
+            <div class = "top_nav_right">
+                <a href = "../Login/login.html" class = "nav_login" id = "Login">Login</a>
+                <a href = "../Register/Register.html" class = "nav_register" id = "Register">Register</a>
+                <div class = "account-box" id = "account-box" onmouseleave="divObj.hidden()" >
+                    <a href = "#" class = "account" id = "account" onclick="divObj.show()"></a>
+                    <div class = "table-box" id = "table-box">
+                        <table class = "account-table" id = "account-table" cellpadding = "0" cellspacing= "0">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a href = "#" onclick="myPersonalPage.pageClick()">Personal Page</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href = "../Index/Index.html" >Index Page</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href = "#" onclick="myLogout.out()">Logout</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id = "db_nav_book" class = "db_nav_book">
+        <div class="search-panel">
+            <form action="" method="get">
+                <div class="btn">
+                    <!--<button>Search</button>-->
+                    <input type="button" id = "search-button" class = "search-button" onclick="mySearch.searchResult('book-input')" value="Search">
+                </div>
+                <div class="search-inp-box">
+                    <div class="search-inp">
+                        <input id="book-input" type="text" placeholder="Bookname" maxlength="60">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id = "middle_nav" class = "middle_nav">
+        <div id = "middle_nav_box" class = "middle_nav_box">
+            <!--<ul id = "menu-main-menu-1" class = "menu-main-menu-1">-->
+                <!--<li>-->
+                    <!--<a href = "#" id = "Services">Services</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href = "#" id = "Locations">Locations</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href = "#" id = "News">News</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href = "#" id = "AboutUs">About Us</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </div>
+    </div>
+    <div id = "middle_line" class = "middle_line"></div>
+    <div id = "content_main" class = "content_main">
+        <div id = "content" class = "content">
+            <div class = "subject" id = "subject">
+                <h1>
+                   <span id = "book-name" class = "book-name"> Database System Concepts</span>
+                </h1>
+                <div class = "mainpic" id = "mainpic">
+                    <a class = "nbg" id = "mainpica" href = "https://img3.doubanio.com/view/subject/l/public/s8958042.jpg" title = "Database System Concepts">
+                        <img id = "mainpicimg" src = "https://img3.doubanio.com/view/subject/l/public/s8958042.jpg" title = "click big pic" alt = "">
+                    </a>
+                </div>
+                <div class = "info" id = "info">
+                    <span>
+                        <span class = "pl">Author&nbsp:&nbsp</span>
+                        <span id = "author" class = "pl"></span>
+                            <!--<span id = "author1" class = "al">（美）Abraham Silberschatz</span>-->
+                        <br>
+                        <span class = "pl">Publisher&nbsp:&nbsp</span>
+                        <span id = "publisher" class = "pl"></span>
+                        <br>
+                        <span class = "pl">publication Year&nbsp:&nbsp</span>
+                        <span id = "publicationyear" class = "pl"></span>
+                        <br>
+                        <span class = "pl">Page&nbsp:&nbsp</span>
+                        <span id = "page" class = "pl"></span>
+                        <br>
+                        <span class = "pl">Location&nbsp:&nbsp</span>
+                        <span id = "location" class = "pl"></span>
+                        <br>
+                        <span class = "pl">ISBN&nbsp:&nbsp</span>
+                        <span id = "ISBN" class = "pl"></span>
+                        <br>
+                        <span class = "pl">Quantity&nbsp:&nbsp</span>
+                        <span id = "quantity" class = "pl"></span>
+                    </span>
+                </div>
+            </div>
+            <div class = "author_box" id = "author_box">
+                <h1>
+                    <span id = "About_author" class = "About_author-name">About Author</span>
+                </h1>
+                <div class = "author_information" id = "author_information">
+                    <!--<P>Abraham Silberschatz</P>-->
+                    <!--<P>于纽约州立大学石溪分校获得博士学位，现为耶鲁大学计算机科学Sidney J. Weinberg教授，-->
+                        <!--计算机科学系主任，曾任贝尔实验室信息科学研究中心副主任。他是ACM Fellow 和 IEEE Fellow，-->
+                        <!--曾获得IEEE Taylor L. Booth 教育奖、 ACM Karl V. Karlstrom 杰出教育者奖、ACM SIGMOD-->
+                        <!--贡献奖和IEEE 计算机学会杰出论文奖。他的研究兴趣包括操作系统、数据库系统、存储系统、网络管理和分布式系统。</P>-->
+                    <!--<p>Henry F. Korth</p>-->
+                    <!--<p>于普林斯顿大学获得博士学位，现为利哈伊大学计算机科学与工程系Weiseman教授，曾任贝尔实验室数据库原理研究中心主任。-->
+                        <!--他是ACM Fellow 和 IEEE Fellow，是VLDB10年贡献奖的获得者。他的研究兴趣包括为现代计算架构（多核、多线程、多级缓存）-->
+                        <!--设计的数据库算法、基于Web的大型数据仓储、实时数据库系统和并行系统。</p>-->
+                </div>
+            </div>
+        </div>
+        <div id = "related_info" class = "related_info">
+            <h2>
+                <span class>Introduce</span>
+            </h2>
+            <div class = "information_box" id = "information_box">
+                <!--<p>-->
+                    <!--本书是数据库系统方面的经典教材之一，其内容由浅入深，既包含数据库系统基本概念，-->
+                    <!--又反映数据库技术新进展。它被国际上许多著名大学所采用，包括斯坦福大学、耶鲁大学、-->
+                    <!--得克萨斯大学、康奈尔大学、伊利诺伊大学等。我国也有多所大学采用本书作为本科生和-->
+                    <!--研究生数据库课程的教材和主要教学参考书，收到了良好的效果。</p>-->
+                <!--<p>-->
+                    <!--第6版保持了前5版的总体风格，同时对内容进行了扩充，对结构进行了调整，以更好地符合-->
+                    <!--数据库教学的需求和反映数据库设计、管理与使用方式的发展和变化。具体更新内容如下：</p>-->
+                <!--<p>-->
+                    <!--调整了内容组织结构，将SQL内容提前，并集中进行介绍。</p>-->
+                <!--<p>-->
+                    <!--采用一个新的模式（基于大学的数据）作为贯穿全书的运行实例。</p>-->
+                <!--<p>-->
+                    <!--修订和更新了对数据存储、索引和查询优化以及分布式数据库的涵盖。</p>-->
+                <!--<p>-->
+                    <!--修订了E-R模型、关系设计和事务管理等内容。</p>-->
+                <!--<p>-->
+                    <!--扩充了关于应用开发和安全性的素材。</p>-->
+                <!--<p>-->
+                    <!--本书配套网站（http://www.db-book.com）提供的教辅资源包括：</p>-->
+                <!--<p>-->
+                    <!--· 书中各章的教学课件。</p>-->
+                <!--<p>-->
+                    <!--· 实践练习的答案。</p>-->
+                <!--<p>-->
+                    <!--· 未放入纸版书中的四个附录（高级关系数据库设计、其他关系查询语言、网状模型、层次模型）。</p>-->
+                <!--<p>-->
+                    <!--· 实验素材（包括大学模式和习题中用到的其他关系的SQL DDL和样例数据，-->
+                    <!--以及关于建立和使用各种数据库系统和工具的说明书）。</p>-->
+                <!--<p>-->
+                    <!--· 最新勘误表。</p>dee-->
+
+            </div>
+        </div>
+    </div>
+    <div id = "search-result" class = "search-result">
+        <div class = "search-result-box">
+        </div>
+    </div>
+    <script type="text/javascript" src="../General/AccountClick.js"></script>
+    <script type="text/javascript" src="../General/Logout.js"></script>
+    <script type="text/javascript" src="../General/PersonPageClick.js"></script>
+    <script type="text/javascript" src="SearchBook.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

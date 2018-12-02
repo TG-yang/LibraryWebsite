@@ -16,7 +16,7 @@ $select = mysqli_select_db($link,'Library_System') or die ("Could not connect to
 mysqli_set_charset($link,'utf8');
 
 $email = $_POST["email"];
-$myIndex = $_POST["myIndex"];
+$myIndex = $_POST["myIndex"]; // this parameter using to differentiate whether it is  7 days' recording, a month's recording or a year's recording.
 
 if(isset($_POST['email'])){
     $query = "select UID from BORROWER where Email = '$email'";
@@ -29,13 +29,13 @@ if(isset($_POST['email'])){
 
     switch ($myIndex){
         case "1":
-            $continue_date = date('Y-m-d',strtotime('-1 year'));
+            $continue_date = date('Y-m-d',strtotime('-1 year')); // using to search last 1 year's recording.
             break;
         case "2":
-            $continue_date = date('Y-m-d',strtotime('-1 month'));
+            $continue_date = date('Y-m-d',strtotime('-1 month'));// using to search last 1 month's recording.
             break;
         case "3":
-            $continue_date = date('Y-m-d',strtotime('-7 day'));
+            $continue_date = date('Y-m-d',strtotime('-7 day'));// using to search last 1 week's recording.
             break;
     }
 
@@ -47,10 +47,10 @@ if(isset($_POST['email'])){
     $results = array();
 
     while ($row = mysqli_fetch_assoc($result2)) {
-        $results[] = $row;
+        $results[] = $row; // store the search result in an array
     }
 
-    $json = json_encode($results);
-    echo $json;
+    $json = json_encode($results); // transfer the arrary into a json
+    echo $json; // send this json to JS file
 }
 mysqli_close($link);

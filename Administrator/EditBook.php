@@ -23,19 +23,19 @@ if(isset($_POST['ISBN'])){
     $result = mysqli_query($link,$query);
     $row = mysqli_fetch_assoc($result);
 
-    $data["ISBN"] = $row["ISBN"];
-    $data["Author"] = $row["Author"];
-    $data["Title"] = $row["Title"];
-    $data["Publisher"] = $row["Publisher"];
-    $data["PublicationYear"] = $row["PublicationYear"];
-    $data["Page"] = $row["Page"];
-    $data["Location"] = $row["Location"];
-    $data["Quantity"] = $row["Quantity"];
-    $data["Cover"] = $row["Cover"];
-    $data["Introduction"] = $row["Introduction"];
-    $data["AboutAuthor"] = $row["AboutAuthor"];
+    $data["ISBN"] = $row["ISBN"]; //book's ISBN
+    $data["Author"] = $row["Author"]; // book's author
+    $data["Title"] = $row["Title"];// book title
+    $data["Publisher"] = $row["Publisher"];// book publisher
+    $data["PublicationYear"] = $row["PublicationYear"];// book publication year
+    $data["Page"] = $row["Page"];// book total page
+    $data["Location"] = $row["Location"]; // book location
+    $data["Quantity"] = $row["Quantity"];// book current quantity
+    $data["Cover"] = $row["Cover"];// book cover
+    $data["Introduction"] = $row["Introduction"]; // book introduction
+    $data["AboutAuthor"] = $row["AboutAuthor"]; // book author's information
 
-    echo json_encode($data);
+    echo json_encode($data); // return a json which store the $data
 }
 
 //mysqli_free_result($link);

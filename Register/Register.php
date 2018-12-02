@@ -15,6 +15,9 @@ $link = mysqli_connect('mysql1.cs.clemson.edu','LbrySystm_8j2b','Zhengwenyang199
 $select = mysqli_select_db($link, 'Library_System_ray6') or die("Could not connect to Library_System");
 mysqli_set_charset($link,'utf8');
 
+// this wil judge whether or not the username, UID, email, password, confirm password,phone is empty
+// it also judge whether the email address format is correct, and judge whether or not the password contains at least one capital letter
+// it will also judge whether the confirm password is same as the password.
 
 if(!$_POST['username']){
     echo 3;
@@ -33,17 +36,17 @@ if(!$_POST['username']){
 }else if(!$_POST['phone']){
     echo 10;
 }else{
-    $name = $_POST['username'];
-    $id = $_POST['UID'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $confirm = $_POST['confirm'];
-    $phone = $_POST['phone'];
-    $profile = "../user-profile/user-normal.jpg";
-    $type = $_POST['type'];
-    $Deposit = 10;
-    $BorrowSum = 0;
-    $VerifyCode = $_POST['verifyCode'];
+    $name = $_POST['username'];//borrower username
+    $id = $_POST['UID'];// borrower UID
+    $email = $_POST['email'];// borrower email
+    $password = $_POST['password'];// borrower password
+    $confirm = $_POST['confirm'];// borrower confirm
+    $phone = $_POST['phone'];// borrower phone number
+    $profile = "../user-profile/user-normal.jpg";// the default avatar
+    $type = $_POST['type'];// the borrower type.
+    $Deposit = 10;//default your account balance is 10
+    $BorrowSum = 0; // defalut you never borrow the book
+    $VerifyCode = $_POST['verifyCode'];// your verify code.
 
     $queryID = "select * from BORROWER where UID = '$id' ";
     $resultID = mysqli_query($link,$queryID);
@@ -55,7 +58,7 @@ if(!$_POST['username']){
         $queryVerify = "select VerifyCode from BORROWER where Email = '$email'";
         $resultVerify = mysqli_query($link,$queryVerify);
         $row = mysqli_fetch_assoc($resultVerify);
-        if($row['VerifyCode'] == $VerifyCode){
+        if($row['VerifyCode'] == $VerifyCode){// judge whether or not the verify code you input is same as the verify code which is stored in database.
             $updateQuery = "UPDATE BORROWER SET UID = '$id', Name = '$name', Password = '$password', Type = '$type',
                             Phone = '$phone',Profile = '$profile',Deposit = '$Deposit',BorrowSum = '$BorrowSum' WHERE Email = '$email'";
             mysqli_query($link,$updateQuery);

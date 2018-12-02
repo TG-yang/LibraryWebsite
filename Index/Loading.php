@@ -16,15 +16,17 @@ $select = mysqli_select_db($link,'Library_System') or die ("Could not connect to
 
 mysqli_set_charset($link,'utf8');
 
-$query = "select Cover,Author,Title,ISBN from BOOK ORDER BY Date DESC LIMIT 8";
+$query = "select Cover,Author,Title,ISBN from BOOK ORDER BY Date DESC LIMIT 8";//this will query 8 results and this result will be shown in index page.
+//this 8 result is the newest in our database.
+
 $result = mysqli_query($link,$query);
 $results = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $results[] = $row;
+    $results[] = $row; // using an array to store the query result.
 }
 $json = json_encode($results);
-echo $json;
+echo $json;//send the json to the JS file
 
 mysqli_free_result($result);
 mysqli_close($link);

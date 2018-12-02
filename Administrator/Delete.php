@@ -22,7 +22,7 @@ if(isset($_POST['ISBN'])){
     $query1 = "select * from BOOK where ISBN = '$ISBN'";
     $result1 = mysqli_query($link,$query1);
 
-    if(mysqli_num_rows($result1) > 0){
+    if(mysqli_num_rows($result1) > 0){ // if the database has this ISBN, you can delete this book
         $query = "DELETE FROM BOOK WHERE ISBN = '$ISBN'";
         $result = mysqli_query($link,$query);
         echo 1;

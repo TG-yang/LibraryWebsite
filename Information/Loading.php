@@ -18,16 +18,16 @@ mysqli_set_charset($link,'utf8');
 
 $ISBN = $_POST['ISBN'];
 
-$query = "select * from BOOK where ISBN = '$ISBN'";
+$query = "select * from BOOK where ISBN = '$ISBN'";// this sql statement will be used query the book information according to the ISBN
 
 $result = mysqli_query($link,$query);
 $results = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $results[] = $row;
+    $results[] = $row; // using an array to store the information
 }
-$json = json_encode($results);
-echo $json;
+$json = json_encode($results);// transfer the result to json
+echo $json;// send the json to JS file.
 
 //mysqli_free_result($link);
 mysqli_close($link);

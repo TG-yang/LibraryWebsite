@@ -24,30 +24,30 @@ if(isset($_POST['UID']) && isset($_POST['ISBN'])){
 
     $IDquery = "SELECT * FROM BORROWER WHERE UID = '$Borrower_ID'";
     $IDresult = mysqli_query($link,$IDquery);
-    if(mysqli_num_rows($IDresult) == 0){
+    if(mysqli_num_rows($IDresult) == 0){ // if there is on this ID in our database, it will return 1
         echo 1;
     }else {
         $row = mysqli_fetch_assoc($IDresult);
         $BorrowSum = $row['BorrowSum'];
-        if($BorrowSum >= 3)
+        if($BorrowSum >= 3) // if this borrower has borrowed three books now, it will return 2, which means he or she can not borrow book.
             echo 2;
         else{
-            if($row['Deposit'] <= 0){
+            if($row['Deposit'] <= 0){ // if the borrower balance is 0, it will return 7
                 echo 7;
             }else{
                 $ISBNquery = "SELECT * FROM BOOK WHERE ISBN = '$Book_ISBN'";
                 $ISBNresutl = mysqli_query($link,$ISBNquery);
-                if(mysqli_num_rows($ISBNresutl) == 0){
+                if(mysqli_num_rows($ISBNresutl) == 0){ // if there is no such ISBN in our database, it will return 3
                     echo 3;
                 }else{
                     $row1 = mysqli_fetch_assoc($ISBNresutl);
                     $Quantity = $row1['Quantity'];
-                    if($Quantity == 0){
+                    if($Quantity == 0){ // if all the this book's copy have been borrowed out, it will return 4
                         echo 4;
                     }else{
                         $time = time();
-                        $Date_out = date("y-m-d",$time);
-                        $Due_date = date('Y-m-d',strtotime('+3 day'));
+                        $Date_out = date("y-m-d",$time); //return the current date.
+                        $Due_date = date('Y-m-d',strtotime('+3 day')); //returnthe due date.
                         $Return_date = "2018-10-1";
                         $BOOK_LOADS_ID = $Borrower_ID."-".$Book_ISBN."-".$Date_out;
                         $insertQuert = "insert into BOOK_LOADS(Borrower_ID,Book_ISBN,Date_out,Due_date,Return_date,BOOK_LOADS_ID)

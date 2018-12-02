@@ -18,11 +18,13 @@ mysqli_set_charset($link,'utf8');
 
 
 if(isset($_POST['email']) && $_POST['password']){
-
+	//if you are administrator, your account is admin@gmail.com and password is admin
 	if($_POST['email'] == 'admin@gmail.com' && $_POST['password'] == 'admin'){
 		echo 2;
 		exit;
 	}
+	// if you are a borrower, if you want to login, you should input your own email and password
+	// we will judge your password.
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$query = "select * from BORROWER where Email = '$email' ";

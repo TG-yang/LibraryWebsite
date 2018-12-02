@@ -20,7 +20,7 @@ mysqli_set_charset($link,'utf8');
 
 if(isset($_POST['ID'])){
     $ID = $_POST['ID'];
-    $query = "SELECT * FROM BORROWER WHERE UID = '$ID'";
+    $query = "SELECT * FROM BORROWER WHERE UID = '$ID'"; //using the UID to find out the borrower's balance.
     $result = mysqli_query($link,$query);
 
     if(mysqli_num_rows($result) == 0){

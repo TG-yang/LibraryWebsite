@@ -16,15 +16,15 @@ $select = mysqli_select_db($link,'Library_System') or die ("Could not connect to
 
 mysqli_set_charset($link,'utf8');
 
-$query = "select * from Library";
+$query = "select * from Library";// this will be used to display the library in our index page. we want to display information dynamically
 $result = mysqli_query($link,$query);
 $results = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $results[] = $row;
+    $results[] = $row; // using the array to store the query information.
 }
-$json = json_encode($results);
-echo $json;
+$json = json_encode($results);// transfer the result into json
+echo $json; // send this json to the JS code and it will be caught by the ajax.
 
 mysqli_free_result($result);
 mysqli_close($link);

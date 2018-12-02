@@ -17,7 +17,7 @@ $select = mysqli_select_db($link,'Library_System') or die ("Could not connect to
 mysqli_set_charset($link,'utf8');
 
 $LibraryName = $_POST['LibraryName'];
-$query = "select * from Library where LibraryName = '$LibraryName'";
+$query = "select * from Library where LibraryName = '$LibraryName'"; // using the library name to query in database
 $result = mysqli_query($link,$query);
 
 if(mysqli_num_rows($result) > 0)

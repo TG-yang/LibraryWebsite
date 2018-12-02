@@ -18,27 +18,27 @@ mysqli_set_charset($link,'utf8');
 
 
 if(isset($_POST['ISBN'])){
-    $ISBN = $_POST['ISBN'];
-    $Title = $_POST['Title'];
-    $Author = $_POST['Author'];
-    $Publisher = $_POST['Publisher'];
-    $PublicationYear = $_POST['PublicationYear'];
-    $Page = $_POST['Page'];
-    $Location = $_POST['Location'];
-    $Quantity = $_POST['Quantity'];
+    $ISBN = $_POST['ISBN']; // book's ISBN
+    $Title = $_POST['Title']; // book's title
+    $Author = $_POST['Author']; // book's author
+    $Publisher = $_POST['Publisher']; // book publisher
+    $PublicationYear = $_POST['PublicationYear']; // book publication year
+    $Page = $_POST['Page'];// book page
+    $Location = $_POST['Location']; // book location in library
+    $Quantity = $_POST['Quantity'];// book current quantity
 //    $Cover = $_POST['Cover'];
-    $Introduction = $_POST['Introduction'];
-    $AboutAuthor = $_POST['AboutAuthor'];
-    $img = $_POST['img'];
+    $Introduction = $_POST['Introduction'];//book introduction
+    $AboutAuthor = $_POST['AboutAuthor'];// book author information
+    $img = $_POST['img']; // book image
 
     if(!empty($_FILES['Cover']['tmp_name'])){
-        $picName = explode(".",$_FILES['Cover']['name']);
-        $picTmpName = $_FILES['Cover']['tmp_name'];
-        $extension = end($picName);
+        $picName = explode(".",$_FILES['Cover']['name']); // using "." to split the string into an array
+        $picTmpName = $_FILES['Cover']['tmp_name']; // book's temporary name
+        $extension = end($picName); // picture's type
         $time = time();
-        $dir_base = "../BookCover/".$ISBN."-".date("y-m-d-h-i-s",$time).".".$extension;
-        move_uploaded_file($picTmpName,$dir_base);
-        chmod($dir_base,644);
+        $dir_base = "../BookCover/".$ISBN."-".date("y-m-d-h-i-s",$time).".".$extension; // picture new address in server
+        move_uploaded_file($picTmpName,$dir_base);// upload the picture into the server.
+        chmod($dir_base,644);// set the picture's permission
 
         $query = "UPDATE BOOK SET Title = '$Title', Author = '$Author', Publisher = '$Publisher', PublicationYear = '$PublicationYear',
                   Page = '$Page', Location = '$Location', Quantity = '$Quantity', Cover = '$dir_base', Introduction = '$Introduction',

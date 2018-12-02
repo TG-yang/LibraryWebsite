@@ -15,7 +15,7 @@ $select = mysqli_select_db($link, 'Library_System') or die("Cound not connect to
 
 mysqli_set_charset($link,'utf8');
 
-if(!preg_match('/[A-Z]/',$_POST['password'])){
+if(!preg_match('/[A-Z]/',$_POST['password'])){ // judge whether or not the password contain at least one capital letter
     echo 1;
 }else if(isset($_POST['email']) && $_POST['password']){
     $email = $_POST['email'];
@@ -25,7 +25,7 @@ if(!preg_match('/[A-Z]/',$_POST['password'])){
     $resultVerify = mysqli_query($link,$queryVerify);
     $row = mysqli_fetch_assoc($resultVerify);
 
-    if($verifyCode == $row['VerifyCode']){
+    if($verifyCode == $row['VerifyCode']){ // judge the verifycode which is inputted, and the user can get the verify code in his or her email box.
         $password = $_POST['password'];
         $query = "update BORROWER set Password = '$password' where Email = '$email' ";
         $result = mysqli_query($link,$query);

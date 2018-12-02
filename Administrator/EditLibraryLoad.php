@@ -22,13 +22,13 @@ $query = "select * from Library where LibraryName = '$LibraryName'";
 $result = mysqli_query($link,$query);
 
 $row = mysqli_fetch_assoc($result);
-$data["LibraryName"] = $row["LibraryName"];
-$data["Position"] = $row["Position"];
-$data["Hours"] = $row["Hours"];
-$data["Phone"] = $row["Phone"];
-$data["Cover"] = $row["Cover"];
+$data["LibraryName"] = $row["LibraryName"]; //library name
+$data["Position"] = $row["Position"];// library postion
+$data["Hours"] = $row["Hours"];// library hours
+$data["Phone"] = $row["Phone"];// library phone number
+$data["Cover"] = $row["Cover"];// library cover
 
-echo json_encode($data);
+echo json_encode($data); //transfer the $data into json and then send to the JS file, which will be caught by ajax/
 
 //mysqli_free_result($link);
 mysqli_close($link);

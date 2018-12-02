@@ -20,7 +20,7 @@ mysqli_set_charset($link,'utf8');
 
 if(isset($_POST['ISBN'])){
     $ISBN = $_POST['ISBN'];
-    $query = "SELECT * FROM BOOK WHERE ISBN = '$ISBN'";
+    $query = "SELECT * FROM BOOK WHERE ISBN = '$ISBN'"; //using the ISBN to find out the cover information
     $result = mysqli_query($link,$query);
 
     if(mysqli_num_rows($result) == 0){

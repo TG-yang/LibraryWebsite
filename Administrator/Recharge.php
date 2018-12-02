@@ -22,7 +22,7 @@ if(isset($_POST['UID'])){
     $Recharge = $_POST['Recharge'];
     $Deposit = intval($_POST['Deposit'] )+ intval($Recharge);
 
-    $query = "UPDATE BORROWER SET Deposit = '$Deposit'  WHERE UID = '$ID'";
+    $query = "UPDATE BORROWER SET Deposit = '$Deposit'  WHERE UID = '$ID'";//using rhe borrower's ID to recharge the person's account
     $result = mysqli_query($link,$query);
 
     if($result)

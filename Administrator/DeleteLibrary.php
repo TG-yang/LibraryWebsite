@@ -22,7 +22,7 @@ $query1 = "select * from Library where LibraryName = '$LibraryName'";
 $result1 = mysqli_query($link,$query1);
 
 
-if(mysqli_num_rows($result1) > 0){
+if(mysqli_num_rows($result1) > 0){ // if database has this library, you can delete this library
     $query = "delete from Library where LibraryName = '$LibraryName'";
     $result = mysqli_query($link,$query);
     echo 2;

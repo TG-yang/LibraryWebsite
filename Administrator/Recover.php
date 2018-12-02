@@ -16,7 +16,7 @@ class Recover{
         $select = mysqli_select_db($this->link, 'Library_System_ray6') or die("Could not connect to Library_System");
 
         mysqli_set_charset($this->link,'utf8');
-
+        // if we want to recover the database, the first step is to delete all the information in database.
         $delete1 = "delete from Library";
         mysqli_query($this->link,$delete1);
 
@@ -36,11 +36,13 @@ class Recover{
     }
 
     function myRecover($tableName,$file){
-        $output = fopen($file,"r");
+        $output = fopen($file,"r"); // open the file with the read only permission.
         $isRecover = false;
         switch ($tableName){
             case 1:
                 while(($csvdata = fgetcsv($output)) !== FALSE){
+                    //Fill in the information to each parameter
+                    //The parameter's order should be same as the backup file.
                     $LibraryName = $csvdata[0];
                     $Position = $csvdata[1];
                     $Hours = $csvdata[2];
@@ -120,7 +122,7 @@ class Recover{
 }
 
 $Recover = new Recover();
-$isLibrary = $Recover->myRecover(1,'../Data/Library.csv');
+$isLibrary = $Recover->myRecover(1,'../Data/Library.csv'); // the first parameter is about the table name, the second parameter is the file's address in our server.
 $isBOOK = $Recover->myRecover(2,'../Data/BOOK.csv');
 $isBOOK_LOADS = $Recover->myRecover(3,'../Data/BOOK_LOADS.csv');
 $isBORROWER = $Recover->myRecover(4,'../Data/BORROWER.csv');
